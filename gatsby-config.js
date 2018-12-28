@@ -27,7 +27,7 @@ module.exports = {
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'standalone',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
     },
     {
@@ -39,7 +39,7 @@ module.exports = {
         background_color: `#002D70`,
         theme_color: `#002D70`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
