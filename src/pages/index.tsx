@@ -29,9 +29,9 @@ class IndexPage extends React.Component<{}, IndexState> {
   render() {
     return (
       <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <h1>MLB Opening Day Progress Bar</h1>
-        <p>How close are we to baseball season?</p>
+        <SEO title="Home" keywords={['gatsby', 'application', 'react', 'baseball']} />
+        <h1>Opening Day Progress Bar</h1>
+        <p>How close are we to MLB opening day?</p>
         <p>{this.state.percentage}%</p>
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
           <Image />
