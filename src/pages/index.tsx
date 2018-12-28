@@ -29,7 +29,7 @@ class IndexPage extends React.Component<{}, { percentage: string }> {
         <SEO title="Home" keywords={['gatsby', 'application', 'react', 'baseball']} />
         <h3>How close are we to MLB <Link to="https://en.wikipedia.org/wiki/Opening_Day">Opening Day</Link>?</h3>
         <p>Progress: {percentage}%</p>
-        <Line percent={percentage} strokeWidth="2" strokeColor="blue" />
+        <Line percent={percentage} strokeWidth="2" strokeColor="cornflowerblue" />
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       </Layout>
     )
