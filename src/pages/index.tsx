@@ -1,5 +1,4 @@
 import { Line } from 'rc-progress';
-import { Link } from 'gatsby'
 import React from 'react'
 
 import Layout from '../components/layout'
@@ -27,7 +26,7 @@ class IndexPage extends React.Component<{}, { percentage: string }> {
     return (
       <Layout>
         <SEO title="Home" keywords={['gatsby', 'application', 'react', 'baseball']} />
-        <h3>How close are we to MLB <Link to="https://en.wikipedia.org/wiki/Opening_Day">Opening Day</Link>?</h3>
+        <h3>How close are we to MLB <a href="https://en.wikipedia.org/wiki/Opening_Day">Opening Day</a>?!</h3>
         <p>Progress: {percentage}%</p>
         <Line percent={percentage} strokeWidth="2" strokeColor="cornflowerblue" />
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
