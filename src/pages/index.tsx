@@ -1,17 +1,13 @@
+import { Line } from 'rc-progress';
 import { Link } from 'gatsby'
 import React from 'react'
 
-import Image from '../components/image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-type IndexState = {
-  percentage: undefined,
-}
-
-class IndexPage extends React.Component<{}, IndexState> {
+class IndexPage extends React.Component<{}, { percentage: string }> {
   state = {
-    percentage: undefined
+    percentage: ""
   }
 
   componentDidMount() {
@@ -21,17 +17,19 @@ class IndexPage extends React.Component<{}, IndexState> {
     const diff = startDate2019 - startDate2018
 
     const todayRelative = new Date() / millisecondsToDays - startDate2018
-    const percentage = Math.round((todayRelative / diff) * 100)
+    const percentage = Math.round((todayRelative / diff) * 100).toString()
 
     this.setState({ percentage })
   }
 
   render() {
+    const { percentage } = this.state;
     return (
       <Layout>
         <SEO title="Home" keywords={['gatsby', 'application', 'react', 'baseball']} />
         <h3>How close are we to MLB <Link to="https://en.wikipedia.org/wiki/Opening_Day">Opening Day</Link>?</h3>
-        <p>{this.state.percentage}%</p>
+        <p>Progress: {percentage}%</p>
+        <Line percent={percentage} strokeWidth="2" strokeColor="blue" />
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       </Layout>
     )
