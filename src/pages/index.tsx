@@ -30,13 +30,9 @@ class IndexPage extends React.Component<{}, IndexState> {
     return (
       <Layout>
         <SEO title="Home" keywords={['gatsby', 'application', 'react', 'baseball']} />
-        <h1>Opening Day Progress Bar</h1>
-        <p>How close are we to MLB opening day?</p>
+        <h3>How close are we to MLB <Link to="https://en.wikipedia.org/wiki/Opening_Day">Opening Day</Link>?</h3>
         <p>{this.state.percentage}%</p>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <Image />
-        </div>
-        <Link to="https://en.wikipedia.org/wiki/Opening_Day">Wikipedia: Opening Day</Link>
+        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       </Layout>
     )
   }
