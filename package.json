@@ -1,5 +1,5 @@
 {
-  "name": "openingday-progress",
+  "name": "opening-day-progressbar",
   "private": false,
   "description": "A bar showing progress toward MLB Opening Day",
   "version": "0.1.0",

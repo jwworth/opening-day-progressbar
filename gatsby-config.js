@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'openingday-progressbar',
-        short_name: 'openingday-progressbar',
+        name: 'opening-day-progressbar',
+        short_name: 'opening-day-progressbar',
         start_url: '/',
         background_color: '#6b37bf',
         theme_color: '#6b37bf',
