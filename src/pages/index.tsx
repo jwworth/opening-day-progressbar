@@ -5,9 +5,13 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
-class IndexPage extends React.Component {
+type IndexState = {
+  percentage: undefined,
+}
+
+class IndexPage extends React.Component<{}, IndexState> {
   state = {
-    percentage: undefined,
+    percentage: undefined
   }
 
   componentDidMount() {
