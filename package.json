@@ -21,7 +21,8 @@
     "react-helmet": "^5.2.0"
   },
   "keywords": [
-    "gatsby", "baseball"
+    "gatsby",
+    "baseball"
   ],
   "license": "MIT",
   "scripts": {
@@ -29,7 +30,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "heroku-postbuild": "gatsby build"
   },
   "devDependencies": {
     "prettier": "^1.15.2"
