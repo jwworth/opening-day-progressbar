@@ -6,18 +6,21 @@ import SEO from '../components/seo'
 
 class IndexPage extends React.Component {
   state = {
-    percentage: '',
+    percentage: 0,
+  }
+
+  calculatePercentage = () => {
+    const openingDay2018 = Date.parse('03-29-2018')
+    const openingDay2019 = Date.parse('03-28-2019')
+    const baseballYear = openingDay2019 - openingDay2018
+
+    const todayRelative = Date.now() - openingDay2018
+    const percentage = Math.round((todayRelative / baseballYear) * 100)
+    return percentage
   }
 
   componentDidMount() {
-    const millisecondsToDays = 216000000
-    const startDate2018 = Date.parse('03-29-2018') / millisecondsToDays
-    const startDate2019 = Date.parse('03-28-2019') / millisecondsToDays
-    const diff = startDate2019 - startDate2018
-
-    const todayRelative = new Date() / millisecondsToDays - startDate2018
-    const percentage = Math.round((todayRelative / diff) * 100).toString()
-
+    const percentage = this.calculatePercentage()
     this.setState({ percentage })
   }
 
