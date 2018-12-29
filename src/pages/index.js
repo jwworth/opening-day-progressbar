@@ -1,12 +1,12 @@
-import { Line } from 'rc-progress';
+import { Line } from 'rc-progress'
 import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-class IndexPage extends React.Component<{}, { percentage: string }> {
+class IndexPage extends React.Component {
   state = {
-    percentage: ""
+    percentage: '',
   }
 
   componentDidMount() {
@@ -22,13 +22,23 @@ class IndexPage extends React.Component<{}, { percentage: string }> {
   }
 
   render() {
-    const { percentage } = this.state;
+    const { percentage } = this.state
     return (
       <Layout>
-        <SEO title="Home" keywords={['gatsby', 'application', 'react', 'baseball']} />
-        <h3>How close are we to MLB <a href="https://en.wikipedia.org/wiki/Opening_Day">Opening Day</a>?!</h3>
+        <SEO
+          title="Home"
+          keywords={['gatsby', 'application', 'react', 'baseball']}
+        />
+        <h3>
+          How close are we to MLB{' '}
+          <a href="https://en.wikipedia.org/wiki/Opening_Day">Opening Day</a>?!
+        </h3>
         <p>Progress: {percentage}%</p>
-        <Line percent={percentage} strokeWidth="2" strokeColor="cornflowerblue" />
+        <Line
+          percent={percentage}
+          strokeWidth="2"
+          strokeColor="cornflowerblue"
+        />
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       </Layout>
     )
