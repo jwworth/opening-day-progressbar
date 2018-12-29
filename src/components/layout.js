@@ -29,7 +29,10 @@ const Layout = ({ children }) => (
         >
           {children}
           <footer>
-            © 2018, <a href="https://twitter.com/jwworth">@jwworth</a>
+            <p>Calculated from the start of the postseason to opening day.</p>
+            <p>
+              © 2018, <a href="https://twitter.com/jwworth">@jwworth</a>
+            </p>
           </footer>
         </div>
       </>

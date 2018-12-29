@@ -10,12 +10,12 @@ class IndexPage extends React.Component {
   }
 
   calculatePercentage = () => {
-    const openingDay2018 = Date.parse('03-29-2018')
+    const postSeason2018 = Date.parse('10-02-2018')
     const openingDay2019 = Date.parse('03-28-2019')
-    const baseballYear = openingDay2019 - openingDay2018
+    const offseason = openingDay2019 - postSeason2018
 
-    const todayRelative = Date.now() - openingDay2018
-    const percentage = Math.round((todayRelative / baseballYear) * 100)
+    const todayRelative = Date.now() - postSeason2018
+    const percentage = Math.round((todayRelative / offseason) * 100)
     return percentage
   }
 
