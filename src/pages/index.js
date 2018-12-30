@@ -3,6 +3,7 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import { getDayOfYear } from 'date-fns'
 
 class IndexPage extends React.Component {
   state = {
@@ -10,18 +11,23 @@ class IndexPage extends React.Component {
   }
 
   calculatePercentage = () => {
-    const postSeason2018 = Date.parse('02 Oct 2018 00:00:00 GMT')
-    const openingDay2019 = Date.parse('28 Mar 2019 00:00:00 GMT')
-    const offseason = openingDay2019 - postSeason2018
+    const today = getDayOfYear(Date.now())
+    const openingDay = getDayOfYear(Date.parse('28 Mar 2019'))
+    const diff = openingDay - today
 
-    const todayRelative = Date.now() - postSeason2018
-    const percentage = Math.round((todayRelative / offseason) * 100)
-    return percentage
+    let percentage
+    if (today < openingDay) {
+      percentage = 1 - diff / 365
+    } else {
+      percentage = 1 - (diff + 365) / 365
+    }
+
+    percentage = Math.floor(percentage * 100)
+    this.setState({ percentage })
   }
 
   componentDidMount() {
-    const percentage = this.calculatePercentage()
-    this.setState({ percentage })
+    this.calculatePercentage()
   }
 
   render() {
