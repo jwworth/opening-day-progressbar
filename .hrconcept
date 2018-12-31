@@ -1,0 +1,5 @@
+name: opening-day-progressbar
+url: https://openingday-progressbar.herokuapp.com/
+banner: true
+description: |
+  An app to track how close we are to MLB Opening Day.
